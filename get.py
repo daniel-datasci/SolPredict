@@ -30,7 +30,7 @@ if not MONGO_URI:
     print("ERROR: MONGO_URI not found in environment or .env. Set MONGO_URI to your MongoDB connection string.", file=sys.stderr)
     sys.exit(2)
 
-DEFAULT_ADDRESS = "FUAfBo2jgks6gB4Z4LfZkqSZgzNucisEHqnNebaRxM1P"
+DEFAULT_ADDRESS = "0x8B1484d57abBE239bB280661377363b03c89CaEa"
 BASE_URL = "https://api.mobula.io/api/2/token/details"
 
 def extract_addresses_from_env_file(env_path: Path) -> List[str]:
@@ -70,7 +70,7 @@ def load_addresses() -> List[str]:
     return [DEFAULT_ADDRESS]
 
 def get_token_details(address: str, timeout: int = 10):
-    params = {"blockchain": "solana", "address": address}
+    params = {"blockchain": "ethereum", "address": address}
     headers = {"Authorization": API_KEY}
     resp = requests.get(BASE_URL, params=params, headers=headers, timeout=timeout)
     resp.raise_for_status()
