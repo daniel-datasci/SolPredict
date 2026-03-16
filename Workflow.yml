@@ -2,7 +2,7 @@ name: Fetch hourly
 
 on:
   schedule:
-    - cron: '0 * * * *'   # top of every hour (UTC)
+    - cron: '1 * * * *'   # top of every hour (UTC)
   workflow_dispatch:
 
 jobs:
