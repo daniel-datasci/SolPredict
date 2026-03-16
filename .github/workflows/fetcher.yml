@@ -1,8 +1,8 @@
 name: Fetch hourly
 
 on:
-  schedule:
-    - cron: '0 * * * *'   # top of every hour (UTC)
+  workflow_dispatch:
+  
 jobs:
   fetch:
     runs-on: ubuntu-latest
