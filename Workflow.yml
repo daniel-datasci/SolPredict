@@ -1,4 +1,4 @@
-name: Fetch hourly
+name: GitHub Token Collector
 
 on:
   workflow_dispatch:
