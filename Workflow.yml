@@ -2,7 +2,7 @@ name: GitHub Token Collector
 
 on:
   workflow_dispatch:
-
+  
 jobs:
   fetch:
     runs-on: ubuntu-latest
