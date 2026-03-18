@@ -18,7 +18,7 @@ ROOT = Path(__file__).parent
 load_dotenv(dotenv_path=ROOT / ".env")
 
 API_KEY = os.getenv("HYPESCORE_API_KEY", "82ef8cfa-346b-4c00-aa70-8e8e73093a3c")
-MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://danifedibah_db_user:ETOcYCmxQrtWg2bU@mobula.wbra7fq.mongodb.net/")
+MONGO_URI = os.getenv("MONGO_URI")
 MONGO_DB = os.getenv("MONGO_DB", "mobula")
 MONGO_COLLECTION = os.getenv("MONGO_COLLECTION", "Token")
 
