@@ -17,8 +17,8 @@ from dotenv import load_dotenv
 ROOT = Path(__file__).parent
 load_dotenv(dotenv_path=ROOT / ".env")
 
-API_KEY = os.getenv("HYPESCORE_API_KEY")
-MONGO_URI = os.getenv("MONGO_URI")
+API_KEY = os.getenv("HYPESCORE_API_KEY", "82ef8cfa-346b-4c00-aa70-8e8e73093a3c")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://danifedibah_db_user:ETOcYCmxQrtWg2bU@mobula.wbra7fq.mongodb.net/")
 MONGO_DB = os.getenv("MONGO_DB", "mobula")
 MONGO_COLLECTION = os.getenv("MONGO_COLLECTION", "Token")
 
@@ -30,7 +30,7 @@ if not MONGO_URI:
     print("ERROR: MONGO_URI not found in environment or .env. Set MONGO_URI to your MongoDB connection string.", file=sys.stderr)
     sys.exit(2)
 
-DEFAULT_ADDRESS = "0x8B1484d57abBE239bB280661377363b03c89CaEa"
+DEFAULT_ADDRESS = "0x6982508145454Ce325dDbE47a25d4ec3d2311933"
 BASE_URL = "https://api.mobula.io/api/2/token/details"
 
 def extract_addresses_from_env_file(env_path: Path) -> List[str]:
